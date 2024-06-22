@@ -5,8 +5,8 @@
 
 /**
  * main - Generate a rand int then print if it's pos, neg or zero
- * Return - returns 0 and prints the number + pos/neg/zero
-*/
+ * Return: 0 and prints the number + pos/neg/zero
+ */
 int main(void)
 {
 	int n;
