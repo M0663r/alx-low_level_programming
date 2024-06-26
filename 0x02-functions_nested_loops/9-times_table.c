@@ -21,7 +21,7 @@ void times_table(void)
 
             if (result < 10 && j > 0)
             {
-                _putchar(' '); // extra space for alignment
+                _putchar(' '); 
             }
             else if (result >= 10)
             {
