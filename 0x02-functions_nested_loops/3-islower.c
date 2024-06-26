@@ -2,21 +2,20 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * _islower - checks if a character is lowercase
+ * @c: the character to check
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: 1 if c is lowercase, 0 otherwise
  */
 
 int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	{	
-	    return 1;
+	{
+		return (1);
 	}
 	else
 	{
-		return 0;
+		return (0);
 	}
 }
