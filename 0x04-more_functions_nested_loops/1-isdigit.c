@@ -9,5 +9,5 @@
 
 int _isdigit(int c)
 {
-	return (isdigitc));
+	return (isdigit(c));
 }
