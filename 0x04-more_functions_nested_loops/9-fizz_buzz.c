@@ -11,7 +11,7 @@
  *
  * Return: Always 0 (Success)
  */
-int fizzbuzz(void)
+int main(void)
 {
 	int i;
 
