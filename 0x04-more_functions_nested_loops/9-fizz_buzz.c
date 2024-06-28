@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * fizzbuzz - Entry point of the program.
+ * main - Entry point of the program.
  *
  * Description:
  * Prints numbers from 1 to 100, replacing multiples of three with "Fizz",
