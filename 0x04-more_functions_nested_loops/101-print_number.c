@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - Prints an integer using only _putchar.
+ * print_number - Prints an integer using only _putchar.
  * @n: The integer to print.
  *
  * Description:
@@ -9,11 +10,11 @@
  * Handles negative numbers by printing a '-' character first.
  */
 
-void main(int n)
+void print_number(int n)
 {
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n = -n;
 	}
 
@@ -22,5 +23,5 @@ void main(int n)
 		print_number(n / 10);
 	}
 
-	putchar((n % 10) + '0');
+	_putchar((n % 10) + '0');
 }
