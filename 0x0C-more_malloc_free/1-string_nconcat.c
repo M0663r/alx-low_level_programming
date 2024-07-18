@@ -1,46 +1,66 @@
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * string_nconcat - Concatenates two strings.
- *
  * @s1: The first string.
  * @s2: The second string.
- * @n: The number of bytes from s2 to concatenate.
+ * @n: The maximum number of bytes from s2 to concatenate.
  *
- * Return: If successful, a pointer to a newly allocated space in memory
- *         containing the concatenated string.
- *         NULL if malloc fails.
+ * Return: A pointer to the concatenated string, or NULL on failure.
+ *         The returned pointer points to a newly allocated space in memory.
+ *         The caller is responsible for freeing the returned pointer.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, total_len;
+	unsigned int s1_len = 0, s2_len = 0, concat_len = 0;
 	char *concat;
+	unsigned int i, j;
 
 	if (s1 == NULL)
 	{
 		s1 = "";
 	}
-
+	
 	if (s2 == NULL)
-	{	
-	    s2 = "";
+	{
+		s2 = "";
 	}
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	while (s1[s1_len] != '\0')
+	{	
+		s1_len++;
+	}
 
-	total_len = len1 + (n < len2 ? n : len2) + 1; /* Add 1 for null terminator */
+	while (s2[s2_len] != '\0')
+	{
+		s2_len++;
+	}
 
-	concat = malloc(total_len);
+	if (n >= s2_len)
+	{
+		n = s2_len;
+	}
+
+	concat_len = s1_len + n;
+
+	concat = malloc(sizeof(char) * (concat_len + 1));
+
 	if (concat == NULL)
-	{	
-    	    return (NULL);
+	{
+		return (NULL);
 	}
 
-	memcpy(concat, s1, len1);
-	memcpy(concat + len1, s2, (n < len2 ? n : len2));
-	concat[total_len - 1] = '\0';
+	for (i = 0; i < s1_len; i++)
+	{	
+		concat[i] = s1[i];
+	}
 
+	for (j = 0; j < n; j++)
+	{
+		concat[i + j] = s2[j];
+	}
+
+	concat[concat_len] = '\0';
+	
 	return (concat);
 }
