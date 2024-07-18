@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+int _putchar(char c);
 int print_program_name(int argc, char *argv[]);
 int count_arguments(int argc);
 void print_arguments(int argc, char *argv[]);
