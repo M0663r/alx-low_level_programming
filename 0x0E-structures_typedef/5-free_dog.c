@@ -13,10 +13,10 @@
  */
 void free_dog(dog_t *d)
 {
-    if (d != NULL)
-    {
-        free(d->name);   /* Free the name string */
-        free(d->owner);  /* Free the owner string */
-        free(d);         /* Free the dog_t structure */
-    }
+	if (d != NULL)
+	{	
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
