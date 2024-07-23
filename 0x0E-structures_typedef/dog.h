@@ -14,6 +14,14 @@ struct dog {
 };
 
 /**
+ * dog_t - Typedef for struct dog.
+ *
+ * Description: This typedef allows us to use dog_t as a shorthand
+ * for struct dog.
+ */
+typedef struct dog dog_t;
+
+/**
  * init_dog - initializes a variable of type struct dog
  * @d: pointer to struct dog to initialize
  * @name: name of the dog
