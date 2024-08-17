@@ -5,13 +5,13 @@
 #define BUFFER_SIZE 1024
 
 /**
- * copy_file - Copies the content of a file to another file.
+ * main - Copies the content of a file to another file.
  * @argc: The number of arguments.
  * @argv: The arguments (file_from and file_to).
  *
  * Return: 0 on success, exits with relevant code on failure.
  */
-int copy_file(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, r, w;
 	char buffer[BUFFER_SIZE];
